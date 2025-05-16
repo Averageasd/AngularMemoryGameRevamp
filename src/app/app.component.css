@@ -1,0 +1,22 @@
+.board{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.cell-row{
+    gap: 1rem;
+    display: flex;
+}
+
+.cell{
+    padding: 0.75rem;
+    background-color: plum;
+}
+
+.chosen-cell{
+    background-color: tomato;
+}
+
+.unavailable-cell{
+    background-color: green;
+}
