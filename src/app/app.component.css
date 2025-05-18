@@ -10,7 +10,10 @@
 
 .cell{
     padding: 0.75rem;
+    width: 1.5rem;
+    height: 1.5rem; 
     background-color: plum;
+    text-align: center;
 }
 
 .chosen-cell{

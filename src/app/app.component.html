@@ -3,18 +3,45 @@
 </header>
 <main>
   <div class="board">
-    <div class="cell-row" *ngFor="let row of gameBoard; index as i">
+    <div>
+      <select (change)="chooseGameBoardSize($event)">
+        <option value="4" selected="true">4x4</option>
+        <option value="8">8X8</option>
+        <option value="16">16x16</option>
+      </select>
+    </div>
+    <div class="cell-row" *ngFor="let row of gameBoard(); index as i">
       <div *ngFor="let cell of row; index as j">
-        <div *ngIf="isCellChosen(i, j)" class="cell" (click)="clickCell(i, j)" [class.chosen-cell]="true">
+        @if(cell.revealed){
+        <div
+          *ngIf="isCellChosen(i, j)"
+          class="cell"
+          (click)="clickCell(i, j)"
+          [class.chosen-cell]="true"
+        >
           {{ cell.val }}
         </div>
-        <div *ngIf="isCellAvailable(i, j) && !isCellChosen(i,j)" (click)="clickCell(i, j)" class="cell">
+        <div
+          *ngIf="isCellAvailable(i, j) && !isCellChosen(i, j)"
+          (click)="clickCell(i, j)"
+          class="cell"
+        >
           {{ cell.val }}
         </div>
-        <div *ngIf="!isCellAvailable(i, j)" class="cell" [class.unavailable-cell]="true">
+        <div
+          *ngIf="!isCellAvailable(i, j)"
+          class="cell"
+          [class.unavailable-cell]="true"
+        >
           {{ cell.val }}
         </div>
+        } @else {
+        <div class="cell" (click)="clickCell(i, j)"></div>
+        }
       </div>
+    </div>
+    <div>
+      <button (click)="reset()">Reset</button>
     </div>
   </div>
 </main>
