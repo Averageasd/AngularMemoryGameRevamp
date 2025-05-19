@@ -82,6 +82,9 @@ export class AppComponent implements OnInit {
     if (!selectedCell.available) {
       return;
     }
+    if (selectedCell.revealed || selectedCell.selected){
+      return;
+    }
     selectedCell.revealed = true;
     selectedCell.selected = true;
 
