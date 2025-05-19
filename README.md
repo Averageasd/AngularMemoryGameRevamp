@@ -9,9 +9,12 @@ Cells are hidden when the game starts. Users can reveal cells by clicking on the
 ## Screenshots
 <p>Image 1</p>
 <img src="./big_game_state.jpg" alt="drawing" width="500"/>
+<hr>
 <p>Image 2</p>
 <img src="./chose_cell_state.jpg" alt="drawing" width="500"/>
+<hr>
 <p>Image 3</p>
 <img src="./initial_state.jpg" alt="drawing" width="500"/>
+<hr>
 <p>Image 4</p>
 <img src="./victory_state.jpg" alt="drawing" width="500"/>
